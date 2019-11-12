@@ -2,6 +2,8 @@ define(`EDGE_AUDIO',`style=dashed, color=green')
 define(`EDGE_DATA',`style=dashed, color=red')
 define(`EDGE_MIDI',`style=dashed, color=blue')
 
+define(`NODE_AUDIO_OUT',`shape=box')
+
 digraph G {
     concentrate=true;
 
@@ -49,7 +51,7 @@ digraph G {
     launchpad -> pc [EDGE_DATA];
 
     # Sound outputs
-    node [shape=box];
+    node [NODE_AUDIO_OUT];
     snd -> pa [EDGE_AUDIO];
     snd -> guitar_combo [EDGE_AUDIO];
     snd -> monitor [EDGE_AUDIO];
