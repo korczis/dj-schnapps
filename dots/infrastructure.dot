@@ -7,18 +7,23 @@
 digraph G {
     concentrate=true;
 
+    # Root nodes
+    pc [label=<PC <br/> Apple <br/> Macbook Pro>];
+    usb [label="USB"];
+
+    # Root connections
     pc -> usb [style=dashed, color=red];
     usb -> pc [style=dashed, color=red];
 
+    snd [label=<Sound Card <br/> Yamaha <br/> AGO6>];
     pc -> snd [style=dashed, color=green];
     snd -> pc [style=dashed, color=green];
 
+    keys [label=<Keyboards <br/> Novation <br/> Impulse 61>]
     pc -> keys [style=dashed, color=red];
     keys -> pc [style=dashed, color=red];
 
-    tablet -> midi [style=dashed, color=blue];
-    midi -> tablet [style=dashed, color=blue];
-
+    # Midi
     midi -> usb [style=dashed, color=red];
     usb -> midi [style=dashed, color=red];
 
@@ -27,15 +32,24 @@ digraph G {
     keys -> midi [style=dashed, color=blue];
     midi -> keys [style=dashed, color=blue];
 
+    tablet [label=<Tablet <br/> Apple <br/> iPad>]
+    tablet -> midi [style=dashed, color=blue];
+    midi -> tablet [style=dashed, color=blue];
+
     # Moog
+    moog [label=<Modular Synth <br/> Moog <br/> Mother 32>];
     midi -> moog [style=dashed, color=blue];
 
+    # TB-03
+    tb03 [label=<Bass Line <br/> Roland <br/> TB-03>];
     tb03 -> midi [style=dashed, color=blue];
     midi -> tb03 [style=dashed, color=blue];
 
+    tr08 [label=<Rhythm Composer <br/> Roland <br/> TR-08>];
     tr08 -> midi [style=dashed, color=blue];
     midi -> tr08 [style=dashed, color=blue];
 
+    sh01 [label=<Classic Synth <br/> Roland <br/> SH-01A>];
     sh01 -> midi [style=dashed, color=blue];
     midi -> sh01 [style=dashed, color=blue];
 
@@ -51,16 +65,26 @@ digraph G {
     launchpad -> pc [style=dashed, color=red];
 
     # Sound outputs
+
+    ## Output - Definitions
     node [shape=box];
+
+    guitar_combo [label = "Guitar Combo"];
+    keys_combo [label = "Keys Combo"];
+    headphones [label = "Headphones"];
+    monitors [label = "Monitors"];
+    pa [label = "PA"];
+
+    ## Output - Connections
     snd -> pa [style=dashed, color=green];
     snd -> guitar_combo [style=dashed, color=green];
-    snd -> monitor [style=dashed, color=green];
+    snd -> monitors [style=dashed, color=green];
     snd -> headphones [style=dashed, color=green];
     snd -> keys_combo [style=dashed, color=green];
 
     tablet -> keys_combo [style=dashed, color=green];
 
     # Extra stuff
-    node [shape=ellipse];
+    oscilloscope [label=<Oscilloscope <br/> Owon <br/> MSO8202T>, shape="ellipse"];
     moog -> oscilloscope [style=dashed, color=green];
 }
