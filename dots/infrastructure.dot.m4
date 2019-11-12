@@ -24,6 +24,7 @@ digraph G {
     keys -> pc [EDGE_DATA];
 
     # Midi
+    midi [label=<MIDI Switch <br/> Midi­tech <br/> MIDI­face 8x8>]
     midi -> usb [EDGE_DATA];
     usb -> midi [EDGE_DATA];
 
@@ -70,10 +71,10 @@ digraph G {
     node [NODE_AUDIO_OUT];
 
     guitar_combo [label = "Guitar Combo"];
-    keys_combo [label = "Keys Combo"];
+    keys_combo [label = <Keyboard Combo / Audiohub <br/> LANEY <br/> AH150>];
     headphones [label = "Headphones"];
     monitors [label = "Monitors"];
-    pa [label = "PA"];
+    pa [label=<PA>];
 
     ## Output - Connections
     snd -> pa [EDGE_AUDIO];

@@ -24,6 +24,7 @@ digraph G {
     keys -> pc [style=dashed, color=red];
 
     # Midi
+    midi [label=<MIDI Switch <br/> Midi­tech <br/> MIDI­face 8x8>]
     midi -> usb [style=dashed, color=red];
     usb -> midi [style=dashed, color=red];
 
@@ -70,10 +71,10 @@ digraph G {
     node [shape=box];
 
     guitar_combo [label = "Guitar Combo"];
-    keys_combo [label = "Keys Combo"];
+    keys_combo [label = <Keyboard Combo / Audiohub <br/> LANEY <br/> AH150>];
     headphones [label = "Headphones"];
     monitors [label = "Monitors"];
-    pa [label = "PA"];
+    pa [label=<PA>];
 
     ## Output - Connections
     snd -> pa [style=dashed, color=green];
