@@ -1,9 +1,9 @@
+
+
+
+
 digraph G {
     concentrate=true;
-
-    oscilloscope;
-
-    # define(`style_audio',`style=dashed')
 
     pc -> usb [style=dashed, color=red];
     usb -> pc [style=dashed, color=red];
@@ -57,4 +57,8 @@ digraph G {
     snd -> keys_combo [style=dashed, color=green];
 
     tablet -> keys_combo [style=dashed, color=green];
+
+    # Extra stuff
+    node [shape=ellipse];
+    moog -> oscilloscope [style=dashed, color=green];
 }

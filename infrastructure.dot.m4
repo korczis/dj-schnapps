@@ -1,60 +1,64 @@
+define(`EDGE_AUDIO',`style=dashed, color=green')
+define(`EDGE_DATA',`style=dashed, color=red')
+define(`EDGE_MIDI',`style=dashed, color=blue')
+
 digraph G {
     concentrate=true;
 
-    oscilloscope;
+    pc -> usb [EDGE_DATA];
+    usb -> pc [EDGE_DATA];
 
-    # define(`style_audio',`style=dashed')
+    pc -> snd [EDGE_AUDIO];
+    snd -> pc [EDGE_AUDIO];
 
-    pc -> usb [style=dashed, color=red];
-    usb -> pc [style=dashed, color=red];
+    pc -> keys [EDGE_DATA];
+    keys -> pc [EDGE_DATA];
 
-    pc -> snd [style=dashed, color=green];
-    snd -> pc [style=dashed, color=green];
+    tablet -> midi [EDGE_MIDI];
+    midi -> tablet [EDGE_MIDI];
 
-    pc -> keys [style=dashed, color=red];
-    keys -> pc [style=dashed, color=red];
+    midi -> usb [EDGE_DATA];
+    usb -> midi [EDGE_DATA];
 
-    tablet -> midi [style=dashed, color=blue];
-    midi -> tablet [style=dashed, color=blue];
+    mic -> usb [EDGE_DATA];
 
-    midi -> usb [style=dashed, color=red];
-    usb -> midi [style=dashed, color=red];
-
-    mic -> usb [style=dashed, color=red];
-
-    keys -> midi [style=dashed, color=blue];
-    midi -> keys [style=dashed, color=blue];
+    keys -> midi [EDGE_MIDI];
+    midi -> keys [EDGE_MIDI];
 
     # Moog
-    midi -> moog [style=dashed, color=blue];
+    midi -> moog [EDGE_MIDI];
 
-    tb03 -> midi [style=dashed, color=blue];
-    midi -> tb03 [style=dashed, color=blue];
+    tb03 -> midi [EDGE_MIDI];
+    midi -> tb03 [EDGE_MIDI];
 
-    tr08 -> midi [style=dashed, color=blue];
-    midi -> tr08 [style=dashed, color=blue];
+    tr08 -> midi [EDGE_MIDI];
+    midi -> tr08 [EDGE_MIDI];
 
-    sh01 -> midi [style=dashed, color=blue];
-    midi -> sh01 [style=dashed, color=blue];
+    sh01 -> midi [EDGE_MIDI];
+    midi -> sh01 [EDGE_MIDI];
 
-    mix -> snd [style=dashed, color=green];
+    mix -> snd [EDGE_AUDIO];
 
     # Synths to mix
-    moog -> mix [style=dashed, color=green];
-    tb03 -> mix [style=dashed, color=green];
-    tr08 -> mix [style=dashed, color=green];
-    sh01 -> mix [style=dashed, color=green];
+    moog -> mix [EDGE_AUDIO];
+    tb03 -> mix [EDGE_AUDIO];
+    tr08 -> mix [EDGE_AUDIO];
+    sh01 -> mix [EDGE_AUDIO];
 
-    pc -> launchpad [style=dashed, color=red];
-    launchpad -> pc [style=dashed, color=red];
+    pc -> launchpad [EDGE_DATA];
+    launchpad -> pc [EDGE_DATA];
 
     # Sound outputs
     node [shape=box];
-    snd -> pa [style=dashed, color=green];
-    snd -> guitar_combo [style=dashed, color=green];
-    snd -> monitor [style=dashed, color=green];
-    snd -> headphones [style=dashed, color=green];
-    snd -> keys_combo [style=dashed, color=green];
+    snd -> pa [EDGE_AUDIO];
+    snd -> guitar_combo [EDGE_AUDIO];
+    snd -> monitor [EDGE_AUDIO];
+    snd -> headphones [EDGE_AUDIO];
+    snd -> keys_combo [EDGE_AUDIO];
 
-    tablet -> keys_combo [style=dashed, color=green];
+    tablet -> keys_combo [EDGE_AUDIO];
+
+    # Extra stuff
+    node [shape=ellipse];
+    moog -> oscilloscope [EDGE_AUDIO];
 }
