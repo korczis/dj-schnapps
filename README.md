@@ -82,12 +82,16 @@ THE CLASSIC TB-303 SOUND IN THE PALM OF YOUR HAND
 
 ### Keyboards
 
-Novation - Impulse 61
+**[Novation - Impulse 61](https://novationmusic.com/keys/impulse)**
+
+*We specifically designed the Impulse keyboard to let you create truly expressive performances. Ultra-responsive with semi-weighted action and aftertouch, its full-size piano style keys adapt perfectly to any instrument you want to play, including organs, synths and pianos.*
 
 
 ### Audio Mixer
 
-Mackie - ProFX 8v2
+**[Mackie - ProFX 8v2](https://mackie.com/products/profxv2-effects-mixers)**
+
+*ProFXv2 mixers feature all-new Vita™ preamps for unmatched sound quality and a no-compromise live mixing toolkit including the all-new, immensely powerful ReadyFX™ effects engine.*
 
 
 ### Oscilloscope
@@ -100,7 +104,7 @@ Owon - MS08202T
 Yamaha - AG06
 
 
-### Keyboard Combo / Audiohub
+### Keyboard Combo / AudioHub
 
 Laney - AH150
 
