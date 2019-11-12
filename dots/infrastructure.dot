@@ -92,3 +92,4 @@ digraph G {
     oscilloscope [label=<Oscilloscope <br/> Owon <br/> MSO8202T>, shape="ellipse"];
     moog -> oscilloscope [style=dashed, color=green];
 }
+
