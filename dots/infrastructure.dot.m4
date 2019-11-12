@@ -9,7 +9,7 @@ digraph G {
 
     # Root nodes
     pc [label=<PC <br/> Apple <br/> Macbook Pro>];
-    usb [label="USB"];
+    usb [label=<USB 3.0 Switch <br/> I-TEC <br/> Charging HUB 16port>];
 
     # Root connections
     pc -> usb [EDGE_DATA];
@@ -28,6 +28,7 @@ digraph G {
     midi -> usb [EDGE_DATA];
     usb -> midi [EDGE_DATA];
 
+    mic [label=<Studio Microphone <br/> Samson <br/> G-Track>]
     mic -> usb [EDGE_DATA];
 
     keys -> midi [EDGE_MIDI];
@@ -54,6 +55,7 @@ digraph G {
     sh01 -> midi [EDGE_MIDI];
     midi -> sh01 [EDGE_MIDI];
 
+    mix [label=<Audio Mixer <br/> Mackie <br/> ProFX 8v2>]
     mix -> snd [EDGE_AUDIO];
 
     # Synths to mix
@@ -62,6 +64,7 @@ digraph G {
     tr08 -> mix [EDGE_AUDIO];
     sh01 -> mix [EDGE_AUDIO];
 
+    launchpad [label=<Launchpad / Drumpad <br/> Novation <br/> Launchpad>]
     pc -> launchpad [EDGE_DATA];
     launchpad -> pc [EDGE_DATA];
 
@@ -70,11 +73,11 @@ digraph G {
     ## Output - Definitions
     node [NODE_AUDIO_OUT];
 
-    guitar_combo [label = "Guitar Combo"];
+    guitar_combo [label = <Guitar Modeling Combo <br/> Fender <br/> Mustang V2>];
     keys_combo [label = <Keyboard Combo / Audiohub <br/> LANEY <br/> AH150>];
-    headphones [label = "Headphones"];
-    monitors [label = "Monitors"];
-    pa [label=<PA>];
+    headphones [label =<Headphones <br/> Marshall <br/> Major>];
+    monitors [label=<Monitor Speakers <br/> Kurzweil <br/> KS-40A>];
+    pa [label=<Active PA <br/> Mackie Thump <br/> 15A>];
 
     ## Output - Connections
     snd -> pa [EDGE_AUDIO];

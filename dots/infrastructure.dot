@@ -9,7 +9,7 @@ digraph G {
 
     # Root nodes
     pc [label=<PC <br/> Apple <br/> Macbook Pro>];
-    usb [label="USB"];
+    usb [label=<USB 3.0 Switch <br/> I-TEC <br/> Charging HUB 16port>];
 
     # Root connections
     pc -> usb [style=dashed, color=red];
@@ -28,6 +28,7 @@ digraph G {
     midi -> usb [style=dashed, color=red];
     usb -> midi [style=dashed, color=red];
 
+    mic [label=<Studio Microphone <br/> Samson <br/> G-Track>]
     mic -> usb [style=dashed, color=red];
 
     keys -> midi [style=dashed, color=blue];
@@ -54,6 +55,7 @@ digraph G {
     sh01 -> midi [style=dashed, color=blue];
     midi -> sh01 [style=dashed, color=blue];
 
+    mix [label=<Audio Mixer <br/> Mackie <br/> ProFX 8v2>]
     mix -> snd [style=dashed, color=green];
 
     # Synths to mix
@@ -62,6 +64,7 @@ digraph G {
     tr08 -> mix [style=dashed, color=green];
     sh01 -> mix [style=dashed, color=green];
 
+    launchpad [label=<Launchpad / Drumpad <br/> Novation <br/> Launchpad>]
     pc -> launchpad [style=dashed, color=red];
     launchpad -> pc [style=dashed, color=red];
 
@@ -70,11 +73,11 @@ digraph G {
     ## Output - Definitions
     node [shape=box];
 
-    guitar_combo [label = "Guitar Combo"];
+    guitar_combo [label = <Guitar Modeling Combo <br/> Fender <br/> Mustang V2>];
     keys_combo [label = <Keyboard Combo / Audiohub <br/> LANEY <br/> AH150>];
-    headphones [label = "Headphones"];
-    monitors [label = "Monitors"];
-    pa [label=<PA>];
+    headphones [label =<Headphones <br/> Marshall <br/> Major>];
+    monitors [label=<Monitor Speakers <br/> Kurzweil <br/> KS-40A>];
+    pa [label=<Active PA <br/> Mackie Thump <br/> 15A>];
 
     ## Output - Connections
     snd -> pa [style=dashed, color=green];
