@@ -13,4 +13,4 @@ Electronic music with all the goodies and frills!
 
 ### Infrastructure
 
-![Infrastructure](https://github.com/korczis/dj-schnapps/raw/master/dots/infrastructure.png)
+![Infrastructure](https://github.com/korczis/dj-schnapps/raw/master/assets/images/dots/infrastructure.png)
