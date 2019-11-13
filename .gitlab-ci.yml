@@ -1,11 +1,16 @@
 image: 'rust:latest'
 
 stages:
-  - build
+  - info
+  - test
 
-build:
-  stage: build
+info:
+  stage: info
   script:
     - rustc --version
     - cargo --version
+
+test:
+  stage: test
+  script:
     - cargo test --verbose
