@@ -14,3 +14,9 @@ test:
   stage: test
   script:
     - cargo test --verbose
+
+cache:
+  paths:
+    - apt/
+    - cargo/
+    - target/
