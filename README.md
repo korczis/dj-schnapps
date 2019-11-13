@@ -13,6 +13,8 @@ Electronic music with all the goodies and frills!
 
 ### Infrastructure
 
+[SVG Link](https://github.com/korczis/dj-schnapps/raw/master/assets/images/dots/infrastructure.svg)
+
 ![Infrastructure](https://github.com/korczis/dj-schnapps/raw/master/assets/images/dots/infrastructure.png)
 
 ## Hardware
